@@ -9,16 +9,14 @@ Script to notify when github actions are finished.
 Pick a directory where you want to install the script. (`~/.local/bin` in the example)
 
 ```bash
-wget https://raw.githubusercontent.com/Jakub3628800/action_checker/master/action_checker.py -P ~/.local/bin && ~/.local/bin/action_checker.py
+wget https://raw.githubusercontent.com/Jakub3628800/action_checker/master/action_checker.py -P ~/.local/bin && chmod +x ~/.local/bin/action_checker.py
 ```
 
 # Running
 You can ofcourse simply run the script with python installed on your system.
 ```bash
-actions_checker
+~/.local/bin/action_checker.py
 ```
-If the installed directory is in your `$PATH`
-
 
 Since I use `gh` cli to create pull requests, it's convenient to run `action_checker.py` after I create a pull request in the background.
 
