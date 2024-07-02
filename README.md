@@ -33,4 +33,3 @@ ghpr() {
     	echo "Not running prchecker, pr create failed with exit code $exit_code"
 	fi
 }
-```

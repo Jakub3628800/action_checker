@@ -13,13 +13,10 @@ class Check(TypedDict):
 
 def notification_msg(pr_checks: List[Check]) -> str:
     """Returns notification message for PR checks."""
-    # find repository name
     repository_name = ""
     for check in pr_checks:
-        try:
-            repository_name = (
-                check["url"].split("https://github.com/Jakub3628800/")[1].split("/")[0]
-            )
+        try:  # find repository name
+            repository_name = check["url"].split("/")[4]
             break
         except IndexError:
             continue
